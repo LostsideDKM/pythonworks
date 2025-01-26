@@ -1,0 +1,45 @@
+16 b)Find the name and salary of those employees whose salary is between
+35000 and 40000.
+
+select emp.emp_no, emp.first_name,sal.salary
+FROM employees as emp, salaries as sal
+Where emp.emp_no= sal.emp_no and sal.salary>35000 and sal.salary<40000;
+
+
+16 d) Display the name of those employees whose name starts with ‘M’.
+
+SELECT first_name
+FROM employees
+where first_name like 'M%'
+
+
+16 f) Display the list of employees in descending order of employee code.
+SELECT emp_no , first_name
+FROM employees 
+ORDER BY emp_no DESC;
+
+-------------------------------------------------------------
+use employees;
+
+select salary  from salaries;
+
+select emp.emp_no, emp.first_name,sal.salary
+FROM employees as emp, salaries as sal
+Where emp.emp_no= sal.emp_no and sal.salary>35000 and sal.salary<40000;
+
+
+SELECT emp_no
+FROM dept_emp
+WHERE dept_no IS NULL;
+
+SELECT first_name
+FROM employees
+where first_name like 'M%';
+
+SELECT emp_no , first_name
+FROM employees 
+ORDER BY emp_no DESC;
+
+SELECT dept_no, avg(salary)
+From salaries
+GROUP BY dept_no;
